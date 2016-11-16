@@ -5,29 +5,27 @@ import (
 	"context"
 )
 
-type FlowID string
-type FlowName string
-
-
 type Message interface {
-	Flow() FlowID
+	Flow() string
 	Body() []byte
+	ContentType() uint32
+	FlowType() int32
 }
 
 type Frame interface {
-	Encode()
-	Decode()
+	Marshall() (data []byte, err error)
+	Unmarshall(data []byte) error
 }
 
 type Flow interface {
-	Id() FlowID
-	Name() FlowName
+	Id() string
+	Name() string
 	Headers() url.Values
 	Context() context.Context
 }
 
 type Master interface {
-	Read(name FlowName, )
+	Read(name string, )
 	Open(name string, flow interface{}) Master
 	Sync() error
 }

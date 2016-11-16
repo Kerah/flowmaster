@@ -1,0 +1,8 @@
+namespace messages.internal.flat;
+
+table Message {
+  flowId:string;
+  body:string;
+  flowType:int;
+  contentType:uint;
+}

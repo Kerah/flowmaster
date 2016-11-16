@@ -1,6 +1,10 @@
 hash: 8c2a386d9dadf893749058fb5084e4353c9fb1e80498192761e55b24674fe0a6
-updated: 2016-11-14T18:35:50.4943056+03:00
-imports: []
+updated: 2016-11-16T16:51:04.685417804+03:00
+imports:
+- name: github.com/google/flatbuffers
+  version: c05803bf9683f3e8dff76bf85d6030ec00823564
+  subpackages:
+  - go
 testImports:
 - name: github.com/gopherjs/gopherjs
   version: e34a5cd6a1bc7c4fde759f2d3039852fc68b5fcc
@@ -14,7 +18,7 @@ testImports:
   - internal/go-render/render
   - internal/oglematchers
 - name: github.com/smartystreets/goconvey
-  version: 019319c870f8f1d61dc9c34291abff5cd128b6e8
+  version: d4c757aa9afd1e2fc1832aaab209b5794eb336e1
   subpackages:
   - convey
   - convey/gotest
